@@ -55,12 +55,14 @@ public class Methods {
         return add(s) / (double)s.length;
     }
 
+
     /**
      * Delivers the sum
      * @param a summand one
      * @param b summand two
      * @return sum of a and b
      */
+
     static double add(double a, double b) {
         return a + b;
     }
