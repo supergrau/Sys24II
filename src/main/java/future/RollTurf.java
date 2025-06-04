@@ -13,6 +13,12 @@ public class RollTurf {
         A = A1 + A2 - A3;
 
         // Output
-        System.out.printf("%.2f",A);
+        System.out.printf("%.2f%n", A);
+
+        // Beispiellösung für Aufgabe 6:
+        System.out.print("Zeile 1\n" +
+                "Zeile 2\n" +
+                "Zeile 3\n" +
+                "Zeile 4\n");
     }
 }
