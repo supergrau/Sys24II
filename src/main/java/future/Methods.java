@@ -55,7 +55,39 @@ public class Methods {
         return add(s) / (double)s.length;
     }
 
+    static void swap(Integer a, Integer b) {
+        int h = a;
+        a = b;
+        b = h;
 
+        System.out.printf("Nach dem Tausch intern: %3d <-> %3d\n", a, b);
+    }
+
+    static void swap(int[] a) {
+        int h = a[0];
+        a[0] = a[1];
+        a[1] = h;
+
+        System.out.printf("Nach dem Tausch intern: %3d <-> %3d\n", a[0], a[1]);
+    }
+
+    static int min(int a , int b, int c) {
+        int min = a;
+        if (b < min) min = b;
+        if (c < min) min = c;
+        return min;
+    }
+
+    static int max(int a , int b, int c) {
+        int max = a;
+        if (b > max) max = b;
+        if (c > max) max = c;
+        return max;
+    }
+
+    static double squareNumber(double number) {
+        return number * number;
+    }
     /**
      * Delivers the sum
      * @param a summand one
@@ -76,12 +108,28 @@ public class Methods {
         logMessage(LocalDateTime.now(), "new log entry");
 
         String msg = getLogMessage(LocalDateTime.now(), "this is the error-message");
-        System.err.println(msg);
+//        System.err.println(msg);
 
         System.out.println(add(1, 2, 3));
         System.out.println(add(10, 2, 3, 4, 5, 6, 7, 8, 9, 10));
 
         System.out.println(add(5,6));
         System.out.println(avg(3, 6, 7));
+
+        Integer val1 = 10, val2 = 22;
+        System.out.printf("Vor dem Tausch : %3d <-> %3d\n", val1, val2);
+        swap(val1, val2);
+        System.out.printf("Nach dem Tausch: %3d <-> %3d\n", val1, val2);
+
+        int[] a = new int[2];
+        a[0] = 43; a[1] = 67;
+        System.out.printf("Vor dem Tausch : %3d <-> %3d\n", a[0], a[1]);
+        swap(a);
+        System.out.printf("Nach dem Tausch: %3d <-> %3d\n", a[0], a[1]);
+
+        System.out.println(min(56,34,98));
+        System.out.println(max(56,34,98));
+        System.out.println(squareNumber(21));
+
     }
 }
